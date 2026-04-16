@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Sarah Ndom — Developer Portfolio
 
-## Getting Started
+A modern, high-performance developer portfolio built with Next.js, showcasing real-world projects, smooth UI interactions, and production-ready engineering practices.
 
-First, run the development server:
+🔗 **Live Site:** https://..
+📂 **GitHub:** https://github.com/Sarahndom/Sarah-Portfolio.git
 
+---
+
+## ✨ Overview
+
+This portfolio is designed to go beyond visuals — it demonstrates:
+
+- Real production projects (not tutorials)
+- Clean UI/UX with smooth animations
+- Strong frontend architecture
+- Performance-focused engineering
+
+Built with scalability, responsiveness, and user experience in mind.
+
+---
+
+## 🧠 Features
+
+- 🎬 Auto-scrolling project carousel with smart pause on interaction  
+- 🎥 Embedded video previews for live project demos  
+- 🧾 Expandable descriptions (“View more / less”)  
+- 🖼️ Image sliders for multi-preview projects  
+- 📩 Functional contact form (Formspree integration)  
+- ⚡ Optimized performance & smooth transitions  
+- 📱 Fully responsive across all screen sizes  
+- 🎯 Clean, modern, and accessible UI  
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+
+### Backend / Services
+- Supabase (Auth, DB, Edge Functions)
+- Formspree (Contact form handling)
+
+### Tools & Deployment
+- Vercel
+- Git & GitHub
+
+---
+
+## 📁 Project Structure
+
+
+/app
+/components
+/projects
+/contact
+layout.tsx
+page.tsx
+
+/src
+/data
+projects.ts
+
+/public
+/images
+/videos
+
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repo
 ```bash
+git clone https://github.com/Sarahndom/Sarah-Portfolio.git
+cd Sarah-Portfolio
+2. Install dependencies
+npm install
+3. Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit: http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+⚙️ Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a .env.local file if needed:
 
-## Learn More
+NEXT_PUBLIC_SUPABASE_URL=_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=_key
+📸 Projects Included
+🎬 StarFlix — AI-powered streaming platform with CMS & offline support
+🛒 Able Enterprises — Electronics marketplace (Next.js + SSR)
+🍔 NexTask — Food delivery app with real-time tracking
+🧩 Extensions Manager — Advanced DOM-based dashboard
+🎫 Ticket App — Custom router + local state management
+🎯 Design Philosophy
+Clarity over complexity
+Performance over unnecessary animations
+Real-world usability over flashy UI
+Consistency across all sections
+📬 Contact
+Email: sarahndom620@gmail.com
+LinkedIn: https://linkedin.com/in/sarah-ndom001
+GitHub: https://github.com/Sarahndom
+🚀 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+This project is deployed on Vercel.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To deploy manually:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+npm run build
+npm start
 
-## Deploy on Vercel
+Or connect your repo directly to Vercel for automatic deployments.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🧩 Future Improvements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Dark/light theme toggle
+Blog / content section
+Analytics integration
+More interactive UI components
+
+⭐ Final Note
+
+This portfolio reflects not just what I can build — but how I think, structure, and ship real products.

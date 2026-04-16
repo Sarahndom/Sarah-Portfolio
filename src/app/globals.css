@@ -1,0 +1,92 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --font-syne: 'Syne', sans-serif;
+  --font-dm:   'DM Sans', sans-serif;
+}
+
+ { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: #050a14;
+  color: #f0f4ff;
+  font-family: var(--font-dm);
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 10% 10%, rgba(37,99,235,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 80%, rgba(6,182,212,0.07) 0%, transparent 50%),
+    linear-gradient(rgba(59,130,246,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 80px 80px, 80px 80px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes spinRing { to { transform: rotate(360deg); } }
+.spin-ring   { animation: spinRing 8s linear infinite; }
+.spin-ring-r { animation: spinRing 8s linear infinite reverse; }
+
+@keyframes greenPulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.5); }
+  50%      { box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+}
+.pulse-dot { animation: greenPulse 2s infinite; }
+
+a { color: inherit; text-decoration: none; } */
+
+
+@import "tailwindcss";
+
+:root {
+  --text-primary: #eef3f8;   /* strong readable (titles) */
+  --text-secondary: #cbd5f5; /* soft but visible */
+  --text-muted: #94a3b8;     /* subtle text */
+}
+
+body{
+  background-color: var(--text-secondary);
+/* background-color: #d9e6f5; */
+}
+
+/* Horizontal scrollbar */
+::-webkit-scrollbar {
+  display: none;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.4); /* blue-500 */
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
