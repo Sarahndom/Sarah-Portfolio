@@ -2,7 +2,7 @@
 
 A modern, high-performance developer portfolio built with Next.js, showcasing real-world projects, smooth UI interactions, and production-ready engineering practices.
 
-🔗 **Live Site:** https://..
+🔗 **Live Site:** https://sarah-portfolio-theta.vercel.app/
 📂 **GitHub:** https://github.com/Sarahndom/Sarah-Portfolio.git
 
 ---
