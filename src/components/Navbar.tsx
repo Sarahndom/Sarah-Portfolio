@@ -10,8 +10,8 @@ const LINKS = [
 ];
 
 export default function Navbar() {
-  const [scrolled,  setScrolled]  = useState(false);
-  const [menuOpen,  setMenuOpen]  = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -23,14 +23,14 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`
- fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300 ${
         scrolled
           ? "bg-[rgba(5,10,20,0.92)] backdrop-blur-xl border-b border-[rgba(59,130,246,0.18)]"
-              : "bg-blue-600"
+          : "bg-transparent"
       }`}
     >
-      <div className=" max-w-[1200px] mx-auto px-6 flex items-center justify-between relative z-10">
+      <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between relative z-10">
+
         {/* Logo */}
         <a
           href="#hero"
@@ -45,16 +45,16 @@ export default function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-muted font-medium tracking-wide hover:text-snow transition-colors duration-200"
+              className="text-sm text-[#7b90b8] font-medium tracking-wide hover:text-white transition-colors duration-200"
             >
               {l.label}
             </a>
           ))}
           <a
-            href="/resume/Sarah Ndo CV.pdf"
+            href="/resume/SarahN CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-semibold bg-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-200"
+            className="text-sm font-semibold bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-200"
           >
             Resume ↗
           </a>
@@ -62,7 +62,7 @@ export default function Navbar() {
 
         {/* Mobile burger */}
         <button
-          className="md:hidden text-snow text-2xl bg-transparent border-none"
+          className="md:hidden text-white text-2xl bg-transparent border-none leading-none"
           onClick={() => setMenuOpen((v) => !v)}
           aria-label="Toggle menu"
         >
@@ -78,17 +78,17 @@ export default function Navbar() {
               key={l.href}
               href={l.href}
               onClick={close}
-              className="text-white color py-3 border-b border-[rgba(59,130,246,0.15)] text-sm font-medium last:border-none hover:text-blue-400 transition-colors"
+              className="text-white py-3 border-b border-[rgba(59,130,246,0.15)] text-sm font-medium last:border-none hover:text-blue-400 transition-colors"
             >
               {l.label}
             </a>
           ))}
           <a
-            href="/resume/Sarah Ndo CV.pdf"
+            href="/resume/SarahN CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
             onClick={close}
-            className="hover:text-blue-500 mt-3 text-center bg-blue text-white py-2.5 rounded-lg font-semibold text-sm"
+            className="mt-3 text-center bg-blue-600 text-white py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-700 transition"
           >
             Resume ↗
           </a>

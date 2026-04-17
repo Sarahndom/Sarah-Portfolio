@@ -123,7 +123,7 @@ export const SKILLS = [
 
 export const EXPERIENCE = [
   {
-    role: "Junior Software Engineer",
+    role: "Software Engineer",
     company: "ScreenerHQ",
     period: "Oct 2025 – Present · Remote · Lagos, Nigeria",
     points: [
