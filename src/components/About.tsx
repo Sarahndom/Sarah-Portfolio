@@ -46,7 +46,7 @@ export default function About() {
             </div>
             <div className="mt-8">
               <a
-                href="/resume/SarahN CV.pdf"
+                href="/resume/Sarah Ndo CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-blue-600 text-white px-8 py-3.5 rounded-xl font-semibold text-sm hover:bg-blue-700 hover:-translate-y-0.5 transition-all duration-200 shadow-[0_4px_20px_rgba(37,99,235,0.35)]"

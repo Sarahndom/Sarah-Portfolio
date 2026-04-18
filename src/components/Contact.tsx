@@ -41,6 +41,12 @@ export default function Contact() {
     } catch {
       setStatus("❌ Network error. Email me directly.");
     }
+
+    // Clear the message after 60 seconds
+setTimeout(() => {
+  setStatus("");
+}, 40000); 
+
     setLoading(false);
   }
 

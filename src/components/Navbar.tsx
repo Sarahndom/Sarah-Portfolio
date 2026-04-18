@@ -51,7 +51,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/resume/SarahN CV.pdf"
+            href="/resume/Sarah Ndo CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-semibold bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-200"
@@ -84,7 +84,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/resume/SarahN CV.pdf"
+            href="/resume/Sarah Ndo CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
             onClick={close}
