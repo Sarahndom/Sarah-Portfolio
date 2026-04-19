@@ -5,7 +5,7 @@ const CONTACT_ITEMS = [
   { icon: "✉️", label: "EMAIL",    value: "sarahndom620@gmail.com",          href: "mailto:sarahndom620@gmail.com"           },
   { icon: "📞", label: "PHONE",    value: "+234 707 733 5336",               href: "tel:+2347077335336"                       },
   { icon: "💼", label: "LINKEDIN", value: "linkedin.com/in/sarah-ndom001",   href: "https://www.linkedin.com/in/sarah-ndom001"},
-  { icon: "🐙", label: "GITHUB",   value: "github.com/Sarahndom",            href: "https://github.com/Sarahndom"            },
+  { icon: "X", label: "X",   value: "x.com/NdomSarah99918",            href: "https://x.com/NdomSarah99918"            },
 ];
 export default function Contact() {
   const ref = useRef<HTMLDivElement>(null);
