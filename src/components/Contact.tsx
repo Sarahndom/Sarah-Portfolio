@@ -7,7 +7,6 @@ const CONTACT_ITEMS = [
   { icon: "💼", label: "LINKEDIN", value: "linkedin.com/in/sarah-ndom001",   href: "https://www.linkedin.com/in/sarah-ndom001"},
   { icon: "🐙", label: "GITHUB",   value: "github.com/Sarahndom",            href: "https://github.com/Sarahndom"            },
 ];
-
 export default function Contact() {
   const ref = useRef<HTMLDivElement>(null);
   const [status, setStatus] = useState("");
@@ -45,7 +44,7 @@ export default function Contact() {
     // Clear the message after 60 seconds
 setTimeout(() => {
   setStatus("");
-}, 40000); 
+}, 30000); 
 
     setLoading(false);
   }
