@@ -41,14 +41,14 @@ export default function Hero() {
         }}
       />
 
-      <section id="hero" className="min-h-screen flex items-center pt-24 pb-16 relative z-10">
+      <section id="hero" className="min-h-screen flex items-center pt-24 pb-16 relative z-10 overflow-hidden">
         <div className="max-w-[1200px] mx-auto px-6 w-full">
 
           {/* ── TWO COLUMN: text left, photo right ── */}
           <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16">
 
             {/* LEFT — Text */}
-            <div className="flex-1 text-center md:text-left">
+            <div className="flex-1 min-w-0 text-center md:text-left">
 
               {/* Available badge */}
               <div className="inline-flex items-center gap-2 bg-[rgba(37,99,235,0.12)] border border-[rgba(59,130,246,0.28)] px-4 py-1.5 rounded-full text-xs font-semibold text-blue-400 tracking-widest uppercase mb-7">
@@ -56,10 +56,10 @@ export default function Hero() {
                 Available for hire — Remote &amp; Global
               </div>
 
-              {/* Name */}
+              {/* Name — mobile min is 2rem so it never bleeds off screen */}
               <h1
-                className="font-syne font-extrabold leading-[1.05] tracking-[-0.03em] mb-6"
-                style={{ fontSize: "clamp(2.8rem, 6vw, 5.2rem)" }}
+                className="font-syne font-extrabold leading-[1.1] tracking-[-0.02em] mb-6 break-words"
+                style={{ fontSize: "clamp(2rem, 8vw, 5.2rem)" }}
               >
                 <span className="block bg-gradient-to-br from-white via-blue-400 to-cyan-400 bg-clip-text text-transparent">
                   Sarah Ndom
@@ -70,7 +70,7 @@ export default function Hero() {
               </h1>
 
               {/* Description */}
-              <p className="text-[#7b90b8] text-lg leading-[1.85] mb-10 font-light max-w-[520px] mx-auto md:mx-0">
+              <p className="text-[#7b90b8] text-base sm:text-lg leading-[1.85] mb-10 font-light max-w-[520px] mx-auto md:mx-0">
                 I build{" "}
                 <strong className="text-[#f0f4ff] font-medium">full-stack products that ship</strong>
                 {" "}— from pixel-perfect UIs to Supabase backends, Edge Functions, and LLM-integrated features.
@@ -96,30 +96,33 @@ export default function Hero() {
               </div>
 
               {/* Stats */}
-              <div className="flex gap-10 mt-12 pt-10 border-t border-[rgba(59,130,246,0.18)] justify-center md:justify-start">
+              <div className="flex gap-8 sm:gap-10 mt-12 pt-10 border-t border-[rgba(59,130,246,0.18)] justify-center md:justify-start">
                 {[
                   { n: "3+", l: "Years Building"    },
-                  { n: "100+", l: "Projects Shipped"  },
-                  { n: "20+",  l: "AI APIs Integrated" },
+                  { n: "8+", l: "Projects Shipped"  },
+                  { n: "3",  l: "AI APIs Integrated" },
                 ].map((s) => (
                   <div key={s.l}>
-                    <div className="font-syne font-extrabold text-3xl text-white">{s.n}</div>
+                    <div className="font-syne font-extrabold text-2xl sm:text-3xl text-white">{s.n}</div>
                     <div className="text-xs text-[#7b90b8] mt-0.5 tracking-wide">{s.l}</div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* RIGHT — Photo */}
+            {/* RIGHT — Photo: 200px on mobile, 280px on md+ */}
             <div className="relative flex-shrink-0">
               <div
                 className="spin-ring rounded-full p-[3px]"
                 style={{
-                  width: 280, height: 280,
+                  width: "min(200px, 55vw)",
+                  height: "min(200px, 55vw)",
                   background: "linear-gradient(135deg,#2563eb,#06b6d4,#2563eb)",
                 }}
               >
-                <div className="spin-ring-r w-full h-full rounded-full overflow-hidden relative bg-[#050a14]">
+                <div
+                  className="spin-ring-r w-full h-full rounded-full overflow-hidden relative bg-[#050a14]"
+                >
                   {images.map((img, i) => (
                     <img
                       key={i}
